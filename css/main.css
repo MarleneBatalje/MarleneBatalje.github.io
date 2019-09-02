@@ -1,9 +1,7 @@
 /*
  * Globals
  */
-* {
-  text-align:center;
-}
+
 /* Links */
 a,
 a:focus,
@@ -28,6 +26,7 @@ a:hover {
 
 html,
 body {
+  text-align:center;
   height: 100%;
   background-color: #333;
 }
