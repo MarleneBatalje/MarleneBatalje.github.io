@@ -1,7 +1,9 @@
 /*
  * Globals
  */
-
+* {
+  text-align:center;
+}
 /* Links */
 a,
 a:focus,
