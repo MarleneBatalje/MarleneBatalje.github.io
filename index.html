@@ -1,66 +1,278 @@
+<!DOCTYPE html>
+<html>
+<title>Marlene Batalje</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Marlenes test</title>
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/cover/">
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/251713_10150189931267499_4067799_n.jpg?_nc_cat=107&_nc_oc=AQn6nF1STJhWvkcdqp251VZg1eWmj37elmhAf1HR43i6gxV0pg9OcBvT98Kc-fd_TsQ&_nc_ht=scontent-arn2-1.xx&oh=639286c7f6b7b5550060cdfc7b62cae2&oe=5DD211D3");
+  min-height: 100%;
+}
 
-    
-<link rel="stylesheet" type="text/css" href="/css/main.css">
+.w3-bar .w3-button {
+  padding: 16px;
+}
+#frans, #hemtex, #hemkop{
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
+td {  
+  max-width: 400px
+}
+.photo {
+  max-width: 400px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  float: center;
+  padding: 5px;
+}
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+}
+</style>
+<body>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-  </head>
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <!--I don't want this to be viasble-->
+    <!--a href="#home" class="w3-bar-item w3-button w3-wide"></a>
+     Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about-me" class="w3-bar-item w3-button">ABOUT ME</a>
+      <a href="#cv" class="w3-bar-item w3-button"><i class="fa fa-user"></i>CV</a>
+      <a href="#projects" class="w3-bar-item w3-button"><i class="fa fa-th"></i>PROJECTS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
-  </header>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">Marlenes test</h1>
-    <p class="lead">Jag håller på att lära mig HTML, CSS och Java.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Lär mig mer!</a>
-    </p>
-  </main>
-
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </div>
-  </footer>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 </div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME </a>
+  <a href="#CV" onclick="w3_close()" class="w3-bar-item w3-button">CV</a>
+  <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Marlene Batalje</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Marlene Batalje</span><br>
+    <span class="w3-large">Digital Analytics Student</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about me</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center" id="about-me">About me</h3>
+  <p class="w3-center w3-large">My goals and passions</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Digital Analytics</p>
+      <p>I'm studying at <a class= "medieinstitutet" href="https://www.medieinstitutet.se">Medieinstitutet</a> in Stockholm. The goal is to be the best in my field.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Passion</p>
+      <p>My family, art, music and being outdoors.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">My strenghts</p>
+      <p>I easily read people and adapt my communication to make myself understood and approachable.<br>
+       I have a strong work ethics. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Support</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center" id="projects">The projects</h3>
+  <p class="w3-center w3-large">Some things I've done so far</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/13775491_10153905193992499_8056788321903500862_n.jpg?_nc_cat=111&_nc_oc=AQlEyIwGrO9lTGxM0Zlcx2tepjL9wgA2s6UfbbjkSnKLnPcEq5eGytaUOt96fNw1tB0&_nc_ht=scontent-arn2-1.xx&oh=9f68f480f147621e9997c984e4ea6215&oe=5E0ACC41" alt="Stockholm" style="width:100%">
+        <div class="w3-container">
+          <h3>Stockholm</h3>
+          <p class="w3-opacity">View from Klarabergsgatan</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/36783093_10156035616277499_8943124828085288960_n.jpg?_nc_cat=104&_nc_oc=AQmzj2rmFUGxzUQjTYvUH27iyRVYU8yLo4jUv4dw8mO__-w6tXmw80x6URiUVU_STq0&_nc_ht=scontent-arn2-1.xx&oh=0381186b8bac75d80ef7f21be2ebdfe7&oe=5DCAACD5" alt="Sri Lanka" style="width:100%">
+        <div class="w3-container">
+          <h3>Sri Lanka</h3>
+          <p class="w3-opacity">National park</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/26167153_10155541933987499_3039947356869715284_n.jpg?_nc_cat=111&_nc_oc=AQl1fQTRS8G7Vmq3yOr5CAlNFTFfpzNyoffFJkMLNb13XVohwxu3vNCIrfKqbvwoicU&_nc_ht=scontent-arn2-1.xx&oh=25f0b44fec99d52c8fb8f089e45c12b2&oe=5E0B40D9" alt="France" style="width:100%">
+        <div class="w3-container">
+          <h3>French riviera</h3>
+          <p class="w3-opacity">The view from St Paul de Vince</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/540406_10150665260367499_271503382_n.jpg?_nc_cat=109&_nc_oc=AQmg4AjJJR6hFuVRQmywws04K-iaH5K9kzMAT-T1SVvJKUMxh1SMyWWozywEvecQ8F8&_nc_ht=scontent-arn2-1.xx&oh=be5ba04b879418c1fd1eb5312b1b4cab&oe=5DFED35B" alt="New York" style="width:100%">
+        <div class="w3-container">
+          <h3>New York</h3>
+          <p class="w3-opacity">View from Empire state building</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">34</span>
+    <br>Age
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">10+</span>
+    <br>Years in retail
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">6</span>
+    <br>Years as a manager
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">1</span>
+    <br>Year as a mom
+  </div>
+</div>
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center" id="cv">MY CV</h3>
+  <p class="w3-center w3-large">Earlier experiences</p>
+<div id="work">
+<table align="center">
+  <thead align="center">
+  </thead>
+  <tbody>
+    <td id#="hemkop">
+      <img class="photo" src="data:image/png;base64,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">Worked at a grocery store called Hemköp.I was in charge of the deli section of the store. I had full responsibility of the budget and profits. I made my own orderings and made sure we had the right amount of goods in stock. I also worked at the deli counter, where I served customers.
+    This job taught me the importance of a good work morale. I learned a lot about preparing food and different cuts of meat.</img></td>
+
+    <td id="frans"><img class="photo"src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTEhMWFBUXGCIYGBgYGBkfGxshIh0eHxsgGiAaJSgiHRsxHx0fITEhJisrLy4vICszODMwNzAwMDABCgoKDQ0OGxAQGjcdHSUrKzQ3Ky83Nzc3Ny0vMistKzc3Ky0tNzc3NS8yLS0xKy03LS4xKzItMjcrMys3LDc1K//AABEIAIwA3AMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAABQYHAgQIAwH/xABGEAACAQMDAgQDAwYLCAIDAAABAgMABBEFEiEGMRNBUWEHInEygZEUQlOhscEjJDM0UmJyc7LC0TVDRHSSouHwgvEVFhf/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQQDBQL/xAAsEQEBAAEDAQUHBQEAAAAAAAAAAQIEESEDBRIxYYETFUFRsdHwFDJxkcEi/9oADAMBAAIRAxEAPwDcaUpQKUpQKUpQKUpQKUqG6v1Oa2tJZ4IxK6DO0njHmeO+BziglpZFUFmIVQMkk4AHqardv15YyXKW0MhldzjMakov9pvT3GaqnRPVU1zdfk1xcQ3UU0G9gq7fDJ7x843d8HvXals003WbcwxiOC7j8Eqq8B17Hj7ufrQWTW+rora8t7WXAE6n58/ZOcKD7E8Zrq9Z61PBdafHE4VJ5ikg2g7gNvmRx3Paq3rfR93qN/dO+2CHasKM8YZmA53R5+zz+dmpKfpK+ntbcSzot3aSboZRkqw4x4gI78D17e9BKadrM7avcWrODCkCuq7RkMSMnPc9zUVo/Wt5c3TLDbI9usphYeIBKmPz2B/N/wDqpDpnpi6iluLu6nR7qZNg2KfDQDtwcE8gVXdN6W1Jr+GeaKKJ42JmuYnx46+QMY88cE4GfOg1OlKUClfhYUDD1oP2lKUClKUClKUClKUClKUClKUClKUCuLsACSQAOST2rlVM6t6os1klsb5ZI4niz4hyFfzKqRzu/fxQTvVHiGznMDlJBGWRlxnIG4Y9c4x99Z7058UJSFjvIPGDIGMluN20EkYlQfZPlj9VfPofW761SJZoJprGd9kDEZljBOF3AfmEf+PSrn0vokWlWzh3U5dnLbcE5Pyr6tgVLZJvVktu05qv6R8MoSZlmVfBZxJbMuVnjzyQT6dhg57VoNrZpGiIASEGFLEs3p3POfeqhN19ydsPHllv9BXyh6vu5m2QQKWxnAySB68kCsv67o+Eu/o9D3Xqdt7Np52L5XCSVVGWIUepOKz1NR1K4R3RwqqSDghSSv2gvmcVESWkr24uXZ2DPtUYJ482Y+Q8hXLLX8f84X14dsOyuds+pJztxzy0O86ntY+8gY+i8/s4qEvOvlH8nET7scfqFROudOeHtSCJ3JYL4hkBySPs7fzfqa+Fhp7208TSqjsxKpGjBmDkfKzDsAPXyrh1NTqe93f2+ezV0dFou53v3Xa8W/5H3m6uvJGCINrE4Cqnzf8AdXxuv/yJkSOVpEaT7O58Kcd+V4B9qmJDJ47Rk/xkWpjjmYbfEfOW2fTgZqIuIZILMRXJ/hHnV40LbmUAjcxPkD++uecz572Vv0/j+fzlo6V6csmGGM3287z8Z5T4+u+z5xaNcu0imVFMTBXLyHGSMjBqLlkkRmXecqSCVY449D5irkhdrq6RFgkRnjLiRvLaMlR2OB+uqfqqRrPKsX8mHIXHbHt7Zrj1+nMJvj87Pq76Xq5dTKzLbwl/uRIaHf3TTJGkzjcwHJzx59/atUFZ18PVT8obd9oIdv7/AL8Vo1el2dL7PvW78vF7YyntpjJttPqUpSt7ySlKUClKUClKUClKUClKUFf626hNlbh0TxJZHEUSeRdu2fbiovX/AAjYRJrIUvIwTMak7XYnaVP5pA86+/VUFpqME0IuFR7ZwxkB/knHYnOOO4/HzqIs+mL68eBr+6imt4WDosI/lSPss54oLF0xpktjbulxcmdEJMZK8qg7KfU1SOotae5kychB9lfT3PvWsEV07jSoH+3Eh/8AiKy6roZ9abY5bRv0Oq6WnyuWWO9+fyY9Xc0S4EdzDIx2qrZY89seeO9aRJ0taH/dAfQn/WuI6StP0f8A3GvPnZ/Vxsssetl2xp8sbjZeZ5fdVtO1+GOMruYYkkZkCZEwfO3DH7ArrP1Gvg7FjZXMXg7d38EB6hf6WKvCdN2g/wByv35NdlbC3jBPhxqBySQOPvNaJpevZtcpGS6/Sy7zC277837fnozSe8klj8KK38NSQzbNxLkDAJJ8q5adot6jb4YnRiMbsAHB74LVo+mavbTZEE0cm3uEYHH3Cu/V93y3fLLny4S9r2S44YTa/Plm0vS9/KQZTuI7F3yR9PSuY6GuTyXTPqWJP44rRq47x2yM19+7+j8d65e99R4TaejOm6DuP6UZ+8/6V1puj7teyBv7LCtQpUvZ3RvhvFnbOpnjtfRk9gk1rPHJJGyBW5yD2PB/VWrKwIBHY0dARggEHyNFUAYHArtp9P7HeS7xn1ms/U2ZXHaxypSlaWIpSlApSlApSlApSlApSozqLXoLKHxpyQm4KMDJJPYAfcaDPbn4eXCeKsknjWayNceBGMSzt3VHbz9M5PtVn+GWkTW1mRMvhmSRpFiyT4St2Tnn/wB9a56t8QLK3nWCRn3EKWYKSse77O8+XcVagaCE1/ppbp1dri5i2rtxDKUB5zkgDk+9Yh19qN1ZXslvBeXJjQKRvlJblQTz9TXouvNvxi/2rP8ARP8AAtBcPhjpkmowSS3F5eBkk2jZOVGMA+/NWrq03Fja20dlK7ytcLGpmYMX3bjtdj5VD/AL+aT/AN7/AJRVg+In/Af89F++gpl18X7uAmO5sQki8HLMvP0IP6jVJ6u+IN5fjY5EcX6NMgH+0e7fsr0heWEUoxLGkg/rKD+2o6LpKwVty2kIPrsFFZF8D9BuDd/lW0pCiMu45AcsMAD19c+1a11f1VBp8PizHLHhIx9pz7eg9T5VNAKq9gqgeXAAry9151E19eSSk/IDsjHkFB4x9e/30GndKy3+tF5p5ntrRW2rHAdpc+Y3d8DzNWj/APm+nfo5M/0vGl3fjurs/DizEWm2qgYzGHP1b5j+2rLRGU9UT32ilJoZnubNm2mOY7mQ+QDd8Edj7Veukup4L+ESwnBHDoftIfQ+3ofOup8S7MS6ZdKfKPePqp3furBvh31E1lexvk+G5CSjyKk9/qDzRXpjUZ2jikdV3sqFgucbiASBVBsvizA8SFbeaWcj5ookJCn03GtF71mukdSafphmtY1upWWVi2Is4OeQCMfLxRF60C/kngSWWFoHbOY37jnj8RzUjUN011Nb3yF7didpw6sMMp5xuH3GpmgUpSgUpSgUpSgUpSgVB9YaDFe2/hSuY8MHRwQCrAHB5+pqcqE6v0q1uLci84hjPik7tuNoPc/QnigpN10larD4LaiheadXuZHZS8wB+VF5yDnke9agq4AA7DisA6S1PSo72S6aNkRDi3hVHc8f7xic/N7ep9q3yCUOqsOzAEZ78jPNB9K83fGL/as/0T/Ateka82/GL/as/wBE/wAC0WNB+AX80n/vf8oqxfET/gP+ei/fVd+AX80n/vf8oqc+KE/hx2km0vsvI22r9pu+AvuTxRF1pVSOh39wN9xetb57Q24XCDyBdgSzepGB6VTetF1XSgtxDevcQFsMJACVPlu9VPqMUGndRsRaTle/hNj/AKTXkqvRnQPXcWpxtDKojnCncg7OvYsmfryPKsJ6p0V7O6lgcY2t8p9VPKkfdRY9NdJfzK2/uU/wipaoDoK4EmnWrD9Eo/AYP7Kn6IiOrx/EbrP6B/8ACa8oV6l+IFwI9Nu2P6Jl+9hgftrzn0fojXl3FAoyGYFj6KOWJ+6ix6g0VibeEnuYkz9dozVa1bUNWWeRbaxgaMH5ZHkALe5AIIq4RoAABwAMCsp0e91UXmoS2kKzRmcriVypG3ONgJ7YNEWnoLp65t3uri6Mfi3TKzJGPlTbu49/tVb6gOldTvJvE/LLQWxUjbh9wfOd2PTGB+NT9ApSlApSlApSlApSlAr43Nski7ZFV19GAI/A19qUFE646ohsVaK0hR7rYX2ogxEoGS8mB2HfH7qtPTju1rA0kgldo1YuBgNkZyB99QOofDXT5WZyjq7klmWRwTnvnJP4Vw6XjgsLk6ak00pePxlVyGWMDjaCO2e/3UE5rPU1nasqXM6RMw3ANnkZxngetefPidfxXGozSwOJI2C4Zc4OEAPf3r0rLbo3LIrH3AP7a4izj/Rp/wBIoMf+DfUtna20qXM6xM0mQGzkjaOe1aBqcC6gLOa2kR4o7gSsecMFyMD3zVgNlF+jT/pFcbqVYYncKMIpbaMDsM/QUHZqv/EC0EunXSEZ/gi33r8w/ZXbsOoIJX8IOBL4aytGe6qwB79j38jXQ1fqC1lgnijlV3MMhCjJyBHnP9nBHPbmg84dN6q1rdQzocFHBPuOzA+xGRXoDr3oqLU4VdCEmC5jkxwQedre37K82V6csOqLW3t4EnlCOLZJGGGOFwACSB60VUOgdek0sGx1NGgUMTFKQTHyeQWHGM8g+/NaJ/8Astljd+VwY9fFT/WuCa3Zzs0W9HwVUhhwSyllUZGCdoJxVdik0BmRlitSX3EHwhxtOGLcfKAeMmiK/wBe65JqoFjpiNMhYGWYAiPjsu48YzyT7DFW34fdEx6dEeQ87j+Ef/Kv9X9td9ep9PjUhZ4kVDjC9ux7ADkYU8jjiuxpHUdtcuUhcsyqHI2sMKfsnkDv5UEjdShUZiyrgH5mOFHuT6VQ11PXYBl7eC9Q8hoW2sR648/wrv8AxQtbqe2S1toy3jyBZHHZFBzlvPGcfhUdpeuajZGO2urHxIhtjSW25GOy5Xy/VQXLQNRe4gWWSF4GbOY3+0MHH/mpGlKBSlKBSlKBSlKBSlKBSlKClfFhpRZqyNIIllU3HhnDmPsdp+uKpvRWiak8sstsWghkYbbi4G6Yxqcqig+R4yeM1szqCMEZHoay/wCIXUl5DJJalXj37Xs5IASXIIzHJ9T3x7d80GoCv2qh0Xpuob2ur+c75FCi3X7CDyz/AFvp69/S30HX1G9SGJ5ZTtRFLMfQCs6tviRYai/5FLHLGkp2BiQA3PAbbyoPar11LpX5VazW+ceIhUH0Pl+uvPHTenmz1WCO9Xw9kozu4H9U57Fc4OaDebbo21j3lA6l4zETvbOw9lGewHYeldPVNCtbKzupIY9pFu6AkkkLhiFBPYZParYDnkVnfxg6hVLY2UR33E5C7F5YLnJJA9cYA+tBhWj2DTzxwoMtI4Ufea9NXXR1rIcyKxzEsLDcQrIpyoYD0PNVP4UfD9rT+NXQxOwwifowe+f65HHsK0yiq6/RloduVfKtvVt7bt2AA2R3YAAA+Qr5J0JZAjCuAFZdu87drEM4I8wSMmrPSiKw/QOnkECAAeWCRt75C+g+Y8VK6dpUNtkqSMokZLNnhMhBz9TUlWcfEDqnTpQ9jOLkyBhgRIwYMPslc4DevoaCPudV1KG/uisEskznZCW4tUiHO8ngZ8/xq1/DzqKa8il8cIXhlMfiR/ycmPNar3QurXdzE1lqFrO8Tgos7Iy5X0k9DjzB/wBa0LS9Oit41ihQRxr2Uf8AvJ96Dt0pSgUpSgUpSgUpSgUpSgUpSgVweJSQSoJXlSQMjy49K50oI7qG4njtpXtoxLMq5RD5n9/HOPOuv0jeXUtrG95EIpjnco48+DjyyOcVM1G9R6utpbS3D5IRc4Hmeyj8cUH2t9UheWSBJFaWMAugPK57Zr56xodtdLtuIUlHluHI+hHI+41kem6tf6bDLdT2qyNffOswb51dgdisDzjzwK0Gz1NtP01JdQmMkirls43Mx5CD1Pl91BwX4eWq8JLdIg7ItxIFHsBngVLaL0xaWpJghVXPdzlnP1ZsmvomuRC1W7kPhxMiuSedobGM49zX3vtWghCGSVVEjBUJPDE9gMUHdpUDqnWNhbyGKe5RHGMqc5GRkZwOODXDqXq6G0tVugDPGxAUxkEEnOOfIcYoLDXS1jVI7aF55jhEGT6+wA8zniqrc6vqU9jcyJAbOVAGiBKuzLjJyPzWx6ipDTL631PTkM+3ZMoR1Jx8/YgH+luGRQR92JtWsiVWaxkDCSDc2C+ACrMBzsOfx5qJsxHq8Zt7oG21O143rw4I7OuO6E4yPLuO4qJj6SmW9jjs4bqMwzAtdTS5QoO4VfMHyrWlsIhKZhGolZQpfA3EDsCfSg+Gg288cEaXMgllUYZwMA/+jzqQpSgUpSgUpSgUpSgUpSgUpSgUpSgUpSgV+OoIwQCPQ1+0oITWemYbma3lkLfxdtyoD8hPkWHqMcVT+qukNRvJpJpHgKR7lggYMyEEEFj6SfvrS6UGRancyL00I3VkkBEBVgQeJPf2rozaPd29zp9nKTLaidZIJGHI4BMZ9MY4H4VtEsSsMMAw9DXCe2R9u5QdrBl9iOx/XQZprN5aW2tztebPCktFPzruyc4wBg84XFdXp7Qnn0i/RUZYpJGktUbOQByMDyyRgVpF/wBP2s0gllhV5AMBjnsDke3epIDHagzT4XQXUZVfyF4Y3XM000hLuwHylVbsvtipKw+GFqk7Su8kieKZY4slUjJOew7nNXqlApSlApSlApSlApSlApSlB//Z"><br><br>I studied at Frans Schartaus Handelsinstitut 2011. Got a degree in Store Management. Some of the courses: Team Management, Personal Management, Store Economics, Marketing and internship at Systembolaget. It taught me a lot about myself and how I interact with other people. I worked on my self awareness a lot. I also learned how to manage teams and the best way to communicate in diffrent situations. For example conflicts and coaching.</img></td>
+    <td id="Hemtex"><img class="photo" src="data:image/png;base64,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"><br><br><br>After studying at Frans Schartau I started working as a store manager. As a store manager you are responsible for achieving goals and coaching your staff on the way. You also plan and make all schedules. It is a big challenge to be manager and I learned so much, both about myself and others. My communication skills improved and I became a better listener. I belive this experience will benefit me in all my future endeavors.</img></td>
+  </tbody>
+</table>
+<div>
+  </div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send me a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Stockholm</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +46 736 30 50 64</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: marlenebatalje@gmail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
 </body>
 </html>
+
 
